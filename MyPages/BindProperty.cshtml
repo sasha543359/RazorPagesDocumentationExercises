@@ -1,0 +1,25 @@
+﻿@page
+
+@model SecondProject.Pages.BindPropertyModel
+
+@*Testing Property (SupportsGet = true)*@
+<h3>Данные</h3>
+<p>Name: @Model.person?.FirstName</p>
+<p>Age: @Model.person?.Age</p>
+<p>Test number: @Model.testnumber</p>
+
+<h1>Введите данные</h1>
+
+<form method="post"> 
+    Name: <input type="text" name="firstname"/>
+    Age: <input type="number" name="age"/>
+    <input type="submit" value="Send"/>
+</form>
+
+@if(Request.Method == "POST")
+{
+    <h3>Данные</h3>
+    <p>Name: @Model.person?.FirstName</p>
+    <p>Age: @Model.person?.Age</p>
+}
+

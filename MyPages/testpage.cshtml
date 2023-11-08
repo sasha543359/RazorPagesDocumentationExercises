@@ -1,0 +1,18 @@
+﻿@page
+
+@functions {
+    void RenderName(string name)
+    {
+        <p>Name: @name</p>
+    }
+}
+
+<div>
+    @{
+        RenderName("testname1");
+        RenderName("testname2");
+        RenderName("testname3");
+    }
+</div>
+
+

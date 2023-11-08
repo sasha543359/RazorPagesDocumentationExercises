@@ -1,0 +1,23 @@
+﻿@page "{handler?}"
+
+@*Example request https://localhost:7129/pagehandlers/byname?name=Tom*@
+@*Example request https://localhost:7129/pagehandlers/byage?age=23*@
+
+@model SecondProject.Pages.PageHandlersModel
+
+<h1>Lista utilizatorilor</h1>
+<table>
+    <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Age</th>
+    </tr>
+    @foreach (var item in @Model.result)
+    {
+        <tr>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.Age</td>
+        </tr>
+    }
+</table>
